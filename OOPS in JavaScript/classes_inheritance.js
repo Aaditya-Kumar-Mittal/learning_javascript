@@ -1,6 +1,7 @@
 class MyClass {
 
-  #private_var = "This is a private variable.";
+  #private_var = "This is a private variable."; //Cannot be directly accessed just by the dot operator
+  #setter_b = 10;
 
   constructor(value1 = 20, value2 = 30, privateChange = "This is a private variable.") {
     this.a = value1;
@@ -15,7 +16,21 @@ class MyClass {
 
   printPrivate() {
     console.log(this.#private_var);
+  }
 
+  get getPrivate() {
+    return this.#private_var;
+  }
+
+  /**
+   * @param {number} b
+   */
+  set setterB(b) {
+    this.#setter_b = b;
+  }
+
+  get getSetterB() {
+    return this.#setter_b;
   }
 }
 
@@ -40,3 +55,22 @@ const obj3 = new MyClass(15, 15, "Changing private var value.")
 console.log(obj3);
 
 obj3.printPrivate();
+
+console.log(obj3.getPrivate); //no need to call since using a getter function
+
+console.log(`The value set before using setter function is: ${obj3.getSetterB}`);
+
+obj3.setterB = 15;
+
+console.log(`The value set using setter function is: ${obj3.getSetterB}`);
+
+const myDate = new Date();
+
+console.log(myDate);
+console.log(myDate.getDate());
+console.log(myDate.getDay());
+console.log(myDate.getFullYear());
+console.log(myDate.getHours());
+console.log(myDate.getMonth());
+
+

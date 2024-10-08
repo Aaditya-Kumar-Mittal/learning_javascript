@@ -31,7 +31,7 @@ body {
   -webkit-backdrop-filter: blur(25px) saturate(180%);
   background-color: rgba(255, 251, 251, 0.315);
   border-radius: 12px;
-  border: px solid white;
+  border: 1px solid white;
   color: white;
   font-weight: bold;
   width: 80%;

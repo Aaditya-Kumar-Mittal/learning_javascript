@@ -1,4 +1,4 @@
-// Higher order Functions are functions whuch accept a function as a parameter or return a function as result
+// Higher order Functions are functions which accept a function as a parameter or return a function as result
 
 
 function abcd() { } // Not a HOF
